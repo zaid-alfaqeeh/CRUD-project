@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="crud.css">
+</head>
+<body >
+<div class="hedaer" style="text-align: center; color: rgb(175, 132, 53);">
+    <h1>CRUDS</h1>
+    <h3>CREATE READ UPDATE DELETE SEARCH</h3>
+</div>
+<div class="felids" style=" display: flex; justify-content: center; flex-wrap: wrap;">
+  <div style="width: 80%; ">
+    <input type="text" placeholder="Title" id="title" >
+<div style="display: flex; flex-wrap: wrap;">
+<input type="number" placeholder="Price" id="price" style="flex-basis: 20%;flex-grow: 1; margin-right: 2px;" >
+<input type="number" placeholder="Taxes"  id="taxes" style="flex-basis: 20%;flex-grow: 1;margin-right: 2px;" >
+<input type="number" placeholder="Ads" id="ads" style="flex-basis: 20%;flex-grow: 1;margin-right: 2px;" >
+<input type="number" placeholder="Discount"  id="discount" style="flex-basis: 20%;flex-grow: 1;margin-right: 2px;" >
+<button class="btn" id="total" style="flex-basis: 12%; flex-grow: 1;"   onclick="getTotal()">Total</button>
+</div>
+<input type="number" id="count" placeholder="Count">
+<input type="text" id="category" placeholder="Category">
+<button type="submit" class="btn cusbtn" id="create" onclick="Createe()">Create</button>
+<input type="text" id="search" placeholder="Search" style="margin-top: 5px;" onkeyup="ser(this.value)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+<button class="btn sbtn"  onclick="Sertitle()">Search By Title</button>
+<button class="btn sbtn" onclick="Sercategory()">Search By Category</button>
+<div id="clearbtn" style="width: 100%;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="table-container" >
+    <table style="width: 100%; text-align: center; color: rgb(231, 140, 35); font-weight: 300; ">
+        <thead >
+            <tr>
+                <th >Id</th>
+                <th >Title</th>
+                <th >Price</th>
+                <th >Taxes</th>
+                <th >Ads</th>
+                <th >Discount</th>
+                <th >Total</th>
+                <th >Category</th>
+                <th >Update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+<script src="crud.js"></script>
+</body>
+</html>
