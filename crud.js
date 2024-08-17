@@ -8,7 +8,7 @@ let category=document.getElementById('category');
 let create=document.getElementById('create');
 let total=document.getElementById('total');
 let search=document.getElementById('search');
-let mood='';
+let mood='Create';
 function getTotal()
 {
 if(price.value!='')
